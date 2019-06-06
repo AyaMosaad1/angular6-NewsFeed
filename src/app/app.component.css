@@ -1,0 +1,25 @@
+
+.container {
+  margin-top: 30px;
+}
+
+p {
+  color: blue;
+}
+
+footer {
+  margin: 50px 0;
+   padding-top: 70px;
+}
+
+body {
+margin-top: 105px; 
+padding-top: 70px;
+}
+
+
+.info-header {
+width: 50%;
+margin: auto;
+border-bottom: 1px #ddd solid; }
+

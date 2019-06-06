@@ -1,0 +1,58 @@
+
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+        <div class="card my-3">
+            <div class="card-header py-1">
+            
+              <!-- User name -->
+              <div class="d-flex">
+                <div class="profile">
+                  <img src="https://dummyimage.com/100x100/000/fff" alt="user" class="user-img">
+                </div>
+                <div class="post-detailes">
+                  <h5><a class="user-name"  #heading> {{ element.user.name }}</a></h5>
+                  <div>
+                    <span class="post-date"> {{ element.date }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body py-1">
+              <!-- Post content -->
+              <div>
+                <ng-content></ng-content>
+                <strong >{{ element.body }}</strong>
+                <div class="post-attachment" *ngIf="element.type != 'text'">
+                  <!-- Image/Video -->
+                  <img [src]="element.attachment_url" class="w-100" alt="post image" *ngIf="element.type == 'image'">
+                  <video [src]="element.attachment_url" class="w-100" controls *ngIf="element.type == 'video'"></video>
+                </div>
+
+              </div>
+            </div>
+         
+            <div class="card-footer mx-3 px-0 py-1">
+              <!-- btns -->
+              <div class="d-flex">
+                <button class="post-btn flex-fill p-2"> <span class="post-btn-icon"><i class="far fa-thumbs-up"></i></span> Like</button>
+                <button class="post-btn flex-fill p-2"> <span class="post-btn-icon"><i class="far fa-comment-alt"></i></span> Comment</button>
+                <button class="post-btn flex-fill p-2"> <span class="post-btn-icon"><i class="far fa-share-square"></i></span> Share</button>
+              </div>
+            </div>
+          </div>
+          </div>
+    </div>
+  </div>
+</section>
+        
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+
+
+
+
