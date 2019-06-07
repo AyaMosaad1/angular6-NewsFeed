@@ -1,3 +1,10 @@
+# Newsfeed
+a Facebook news feed like page using angular 6+.  
+- Data to be provided from a "data.json" file which will be in the assets folder and should be fetched through a service. 
+- Posts types can be Image post, Text post, or Video post. 
+
+
+
 # Facebook
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
