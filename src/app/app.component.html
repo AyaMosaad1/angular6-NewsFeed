@@ -16,7 +16,7 @@
                                   <h1 > News Feed </h1>
                                   </div>
                                 <div class="col-lg-12 ">
-                                  <app-server-element
+                                  <app-posts-view-post
                                   *ngFor="let serverElement of serverElements"
                                   [srvElement]="serverElement"
                                   [name]="serverElement.name">
@@ -24,7 +24,7 @@
                                     <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
                                     <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
                                   </p>
-                                </app-server-element>
+                                </app-posts-view-post>
                                   </div>
                                  </div>
     
@@ -50,10 +50,10 @@
                             
                                        
                                           <div class="col-lg-12">
-                                              <app-cockpit
+                                              <app-posts-create-post
                                               (serverCreated)="onServerAdded($event)"
                                               (bpCreated)="onBlueprintAdded($event)"
-                                            ></app-cockpit>
+                                            ></app-posts-create-post>
                                             </div>
                                       
                                       
