@@ -12,9 +12,19 @@
                   <img src="https://dummyimage.com/100x100/000/fff" alt="user" class="user-img">
                 </div>
                 <div class="post-detailes">
-                  <h5><a class="user-name"  #heading> {{ element.user.name }}</a></h5>
+                 
+
+                      <div class="post-attachment" >
+                          <!-- Image/Video -->
+                          <h5><a class="user-name" *ngIf="element.type == 'blueprint'" #heading> {{ element.name }} 
+                            </a></h5>
+                            <h5><a class="user-name" *ngIf="element.type !='blueprint'" > {{ element.user.name }} 
+                              </a></h5>
+                     </div>
+        
                   <div>
                     <span class="post-date"> {{ element.date }}</span>
+                    <span class="post-date" *ngIf="element.type == 'blueprint'">sun Dec 20 1997 12:02:53 GMT+0000 (UTC)</span>
                   </div>
                 </div>
               </div>
